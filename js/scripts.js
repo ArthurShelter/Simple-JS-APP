@@ -1,1 +1,4 @@
-let pokemonList = [];
+let pokemonList = [
+    [pokemonOne, pokemonTwo, pokemonThree]
+];
+
