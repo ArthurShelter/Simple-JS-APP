@@ -14,3 +14,8 @@ let pokemonTwo = {
     types: ['flying', 'normal']
 };
 
+let pokemonThree = {
+    name: 'Meowth',
+    height: 0.4,
+    types: 'normal'
+};
