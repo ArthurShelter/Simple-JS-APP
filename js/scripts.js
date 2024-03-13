@@ -1,5 +1,6 @@
 let pokemonList = [
     [pokemonOne, pokemonTwo, pokemonThree]
+        types: ['normal']
 ];
 
 let pokemonOne = {
