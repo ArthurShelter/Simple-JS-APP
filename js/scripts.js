@@ -1,5 +1,4 @@
 let pokemonList = [
-    [pokemonOne, pokemonTwo, pokemonThree]
     {
         name: 'Bulbasaur',
         height: 0.7,
@@ -17,23 +16,6 @@ let pokemonList = [
     },
 ];
 
-let pokemonOne = {
-    name: 'Bulbasaur',
-    height: 0.7,
-    types: ['grass', 'poison']
-};
-
-let pokemonTwo = {
-    name: 'Fearow',
-    height: 1.2,
-    types: ['flying', 'normal']
-};
-
-let pokemonThree = {
-    name: 'Meowth',
-    height: 0.4,
-    types: 'normal'
-};for (let i = 0; i < pokemonList.length; i++) {
 for (let i = 0; i < pokemonList.length; i++) {
     document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + '</p>');
 }
