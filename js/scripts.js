@@ -21,25 +21,44 @@ let pokemonRepository = (function () {
         pokemonList.push(pokemon);
     }
 
+    function addListItem(pokemon) {
+    let pokemonVariable = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('pocket-monster');
+    listItem.appendChild(button);
+    pokemonVariable.appendChild(listItem);
+    }
+
     function getAll() {
         return pokemonList;
     }
 
     return {
         add: add,
+        addListItem: addListItem,
         getAll: getAll
     };
 
 })();
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-    if (pokemon.height > 1.0) {
+    pokemonRepository.addListItem(pokemon);
+    /* if (pokemon.height > 1.0) {
+        
+        
+        
         document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')' + '</p>');
         document.write(`That's a big one!`);
     }
     else {
-        document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')' + '</p>');
+        
+        
+        
+        //document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')' + '</p>');
     }
+    */
 });
 
 function divide(dividend, divisor) {
