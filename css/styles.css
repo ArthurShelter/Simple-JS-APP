@@ -1,3 +1,51 @@
+body {
+    background-color: white;
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 400;
+    font-size: 16px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+}
+
+ul {
+    padding: 50px 0;
+    text-align: center;
+}
+
+button {
+    font-size: 50px;
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
 .pocket-monster {
     color: blue;
 }
+/*
+@media all and (max-width: 500px) {
+    button {
+        text-align: (center);
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+    grid-item:last-child{
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+*/
