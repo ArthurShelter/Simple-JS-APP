@@ -22,13 +22,22 @@ let pokemonRepository = (function () {
     }
 
     function addListItem(pokemon) {
-    let pokemonVariable = document.querySelector('.pokemon-list');
-    let listItem = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('pocket-monster');
-    listItem.appendChild(button);
-    pokemonVariable.appendChild(listItem);
+        let pokemonVariable = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('pocket-monster');
+        listItem.appendChild(button);
+        pokemonVariable.appendChild(listItem);
+
+        button.addEventListener('click', function () {
+            showDetails(pokemon);
+        });
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon);
     }
 
     function getAll() {
@@ -38,12 +47,13 @@ let pokemonRepository = (function () {
     return {
         add: add,
         addListItem: addListItem,
+        showDetails: showDetails,
         getAll: getAll
     };
 
 })();
 
-pokemonRepository.getAll().forEach(function(pokemon) {
+pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
     /* if (pokemon.height > 1.0) {
         
@@ -62,13 +72,12 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 });
 
 function divide(dividend, divisor) {
-if (divisor === 0)
-{
-    return 'You are trying to divide by 0.'
-}
-else {
-    let result = dividend / divisor;
-    return result;
-}
+    if (divisor === 0) {
+        return 'You are trying to divide by 0.'
+    }
+    else {
+        let result = dividend / divisor;
+        return result;
+    }
 
 }
