@@ -100,28 +100,4 @@ pokemonRepository.loadList().then(function () {
 
 pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
-    /* if (pokemon.height > 1.0) {
-        
-        
-        
-        document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')' + '</p>');
-        document.write(`That's a big one!`);
-    }
-    else {
-        
-        
-        
-        //document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')' + '</p>');
-    }
-    */
 });
-
-function divide(dividend, divisor) {
-    if (divisor === 0) {
-        return 'You are trying to divide by 0.'
-    }
-    else {
-        let result = dividend / divisor;
-        return result;
-    }
-}
