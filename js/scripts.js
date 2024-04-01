@@ -21,7 +21,11 @@ let pokemonRepository = (function () {
         closeButtonElement.addEventListener('click', hideModal);
 
         let titleElement = document.createElement('h1');
-        titleElement.innerText = pokemon.name;
+
+        //capitalizes first letter of Pokemon's name
+        let capitalizedPokemon = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+
+        titleElement.innerText = capitalizedPokemon;
 
         let contentElement = document.createElement('p');
         contentElement.innerText = pokemon.height;
