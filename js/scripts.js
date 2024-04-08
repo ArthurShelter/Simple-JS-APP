@@ -6,7 +6,6 @@ let pokemonRepository = (function () {
 
     let modalContainer = document.querySelector('#modal-container');
 
-    // REST OF CODE
     function showModal(pokemon) {
         // Clear all existing modal content
         modalContainer.innerHTML = '';
@@ -16,7 +15,7 @@ let pokemonRepository = (function () {
 
         // Add the new modal content
         let closeButtonElement = document.createElement('button');
-        closeButtonElement.classList.add('modal-close');
+        closeButtonElement.classList.add('modal-close','btn','btn-primary');
         closeButtonElement.innerText = 'Close';
         closeButtonElement.addEventListener('click', hideModal);
 
@@ -74,10 +73,11 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         let pokemonVariable = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
+        listItem.classList.add('.list-group-item');
 
         let button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('pocket-monster');
+        button.classList.add('pocket-monster','btn','btn-primary');
         listItem.appendChild(button);
         pokemonVariable.appendChild(listItem);
 

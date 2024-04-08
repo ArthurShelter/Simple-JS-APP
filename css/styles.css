@@ -60,6 +60,7 @@ button {
   
   .modal-close {
     float: right;
+    appearance: none;
     -webkit-appearance: none;
     border: 0;
     background: none;
