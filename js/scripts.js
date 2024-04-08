@@ -24,13 +24,14 @@ let pokemonRepository = (function () {
 
         let contentElement = document.createElement('p');
         contentElement.innerText = "Height: " + pokemon.height;
-
+        // pokemon sprite image
         let imageElement = document.createElement("img");
         imageElement.src = pokemon.imageUrl;
         // imageElement.setAttribute("src", img);
         // imageElement.setAttribute("width", "304");
         // imageElement.setAttribute("height", "228");
-        // imageElement.setAttribute("alt", "Pokemon sprite");
+        imageElement.setAttribute("alt", "Pokemon sprite");
+        imageElement.setAttribute("title", "Pokemon sprite");
 
         modal.appendChild(closeButtonElement);
         modal.appendChild(titleElement);
