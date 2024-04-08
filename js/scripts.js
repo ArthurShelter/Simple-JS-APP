@@ -6,7 +6,6 @@ let pokemonRepository = (function () {
 
     let modalContainer = document.querySelector('#modal-container');
 
-    // REST OF CODE
     function showModal(pokemon) {
         // Clear all existing modal content
         modalContainer.innerHTML = '';
@@ -16,7 +15,7 @@ let pokemonRepository = (function () {
 
         // Add the new modal content
         let closeButtonElement = document.createElement('button');
-        closeButtonElement.classList.add('modal-close');
+        closeButtonElement.classList.add('modal-close','btn','btn-primary');
         closeButtonElement.innerText = 'Close';
         closeButtonElement.addEventListener('click', hideModal);
 
@@ -29,17 +28,19 @@ let pokemonRepository = (function () {
 
         let contentElement = document.createElement('p');
         contentElement.innerText = "Height: " + pokemon.height;
-
+        // pokemon sprite image
         let imageElement = document.createElement("img");
         imageElement.src = pokemon.imageUrl;
         // imageElement.setAttribute("src", img);
         // imageElement.setAttribute("width", "304");
         // imageElement.setAttribute("height", "228");
-        // imageElement.setAttribute("alt", "Pokemon sprite");
+        imageElement.setAttribute("alt", "Pokemon sprite");
+        imageElement.setAttribute("title", "Pokemon sprite");
 
         modal.appendChild(closeButtonElement);
         modal.appendChild(titleElement);
         modal.appendChild(contentElement);
+        // attaching pokemon sprite image to modal
         modal.appendChild(imageElement);
         modalContainer.appendChild(modal);
 
@@ -78,10 +79,13 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         let pokemonVariable = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
+        listItem.classList.add('.list-group-item');
 
         let button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('pocket-monster');
+        button.classList.add('pocket-monster','btn','btn-primary');
+        button.setAttribute('data-toggle', 'modal');
+        button.setAttribute('data-target', 'exampleModal');
         listItem.appendChild(button);
         pokemonVariable.appendChild(listItem);
 
