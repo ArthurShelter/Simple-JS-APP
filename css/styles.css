@@ -20,7 +20,7 @@ button {
 }
 
 .pocket-monster {
-    color: blue;
+    color: rgb(0, 0, 0);
 }
 #modal-container {
     display: none;
