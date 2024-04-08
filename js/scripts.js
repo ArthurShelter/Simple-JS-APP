@@ -36,6 +36,7 @@ let pokemonRepository = (function () {
         modal.appendChild(closeButtonElement);
         modal.appendChild(titleElement);
         modal.appendChild(contentElement);
+        // attaching pokemon sprite image to modal
         modal.appendChild(imageElement);
         modalContainer.appendChild(modal);
 
