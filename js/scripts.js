@@ -3,18 +3,13 @@ let pokemonRepository = (function () {
 
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-
-    // let modalContainer = document.querySelector('#modal-container');
     let modalContainer = document.querySelector('.modal-body');
 
     function showModal(pokemon) {
         // Clear all existing modal content
         modalContainer.innerHTML = '';
 
-        // let modalBody = document.querySelector('.modal-body');
-        let modal = document.createElement("div");
-
-        // modalBody.innerHTML = '';
+        let modal = document.createElement('div');
 
         let modalTitle = document.querySelector('.modal-title');
         modalTitle.innerText =
@@ -22,16 +17,14 @@ let pokemonRepository = (function () {
 
 
         // pokemon sprite image
-        let imageElement = document.createElement("img");
+        let imageElement = document.createElement('img');
         // imageElement.classList.add('modal-img');
         imageElement.src = pokemon.imageUrl;
-        imageElement.setAttribute("alt", "Pokemon sprite");
+        imageElement.setAttribute('alt', 'Pokemon sprite');
 
         let heightElement = document.createElement('p');
         heightElement.innerHTML = 'Height: ' + pokemon.height;
 
-        // modalBody.appendChild(heightElement);
-        // modalBody.appendChild(imageElement);
         modal.appendChild(heightElement);
         modal.appendChild(imageElement);
         modalContainer.appendChild(modal);
