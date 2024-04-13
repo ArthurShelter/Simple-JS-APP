@@ -1,0 +1,1 @@
+This is a pokedex built as an exercise in practicing javascript, bootstrap, and a couple of other things.
